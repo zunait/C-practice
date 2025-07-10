@@ -26,15 +26,15 @@ int main(){
 
     //now lower part of the diamond
     int lower_mid = (n-1)/2;
-    for(int i=1; i<=lower_mid; i++){
+    for(int i=lower_mid; i>=1; i--){
 
         // for spaces
-        for(int j=1; j<=i; j++){
+        for(int j=lower_mid; j>=i; j--){
             printf(" ");
         }
 
         // for stars
-        for(int k=(2*i)-1; k<=(n-2); k++){
+        for(int k=1; k<=(2*i)-1; k++){
             printf("*");
         }
 
