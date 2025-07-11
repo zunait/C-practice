@@ -4,6 +4,7 @@ int main(){
     printf("Enter row number = ");
     scanf("%d",&n);
     
+    int mid = (n+1)/2;
     //taking only odd values as input
     if(n%2==0){
         printf("Please enter an odd number!\n\n");
@@ -11,8 +12,6 @@ int main(){
     }
     
     // for upper part of the diamond
-    int var = 0;
-    int mid = (n+1)/2;
     
     for(int i=1; i<=mid; i++){
         // for spaces
@@ -20,8 +19,7 @@ int main(){
             printf(" ");
         }
         // for stars
-        var++;
-        int temp = var;
+        int temp = i;
         for(int k=1; k<=(2*i)-1; k++){
             if(k<i){
                 printf("%d",temp);
@@ -38,11 +36,10 @@ int main(){
     
     // now lower part of the diamond
     
-    int lower_mid = (n-1)/2;
-    for(int i=lower_mid; i>=1; i--){
+    for(int i=mid-1; i>=1; i--){
         
         // for spaces
-        for(int j=lower_mid; j>=i; j--){
+        for(int j=mid-1; j>=i; j--){
             printf(" ");
         }
         // for stars
